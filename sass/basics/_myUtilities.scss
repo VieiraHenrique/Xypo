@@ -1,0 +1,21 @@
+/* SPACING */
+
+.sep-m {
+    margin-top: $separator;
+    margin-bottom: $separator;
+}
+
+.sep-p {
+    padding-top: $separator;
+    padding-bottom: $separator;
+}
+
+
+/* BUTTONS */
+
+.btn {
+    padding: 1.5rem 2.5rem;
+    border-radius: 10rem;
+    display: inline-block;
+    border: 2px solid transparent;
+}

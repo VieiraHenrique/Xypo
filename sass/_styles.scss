@@ -1,0 +1,60 @@
+#navbar {
+
+    position: fixed;
+    width: 100%;
+
+    .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    .logo {
+        width: 10rem;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    #toggle:checked~ul {
+        right: 0;
+    }
+
+    .menu {
+        label {
+            position: relative;
+            z-index: 1000;
+            cursor: pointer;
+
+            img {
+                width: 5rem;
+            }
+        }
+
+        ul {
+            position: fixed;
+            width: 30vw;
+            height: 100vh;
+            top: 0;
+            right: -30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            background: $color-primary;
+            transition: right .5s ease;
+
+            a {
+                color: $white;
+                border-bottom: 2px solid transparent;
+
+                &:hover {
+                    border-bottom: 2px solid $white;
+                }
+            }
+        }
+    }
+}
