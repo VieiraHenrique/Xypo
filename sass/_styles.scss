@@ -1,13 +1,58 @@
+.square-pink {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $color-secondary;
+    margin: 2rem 0;
+}
+
+h1,
+h2 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    border: 2px solid $color-primary;
+    margin: 2rem 0;
+    color: $color-primary;
+
+    &:hover {
+        background: $color-primary;
+        color: $white;
+    }
+}
+
 #navbar {
 
     position: fixed;
     width: 100%;
+    z-index: 100;
 
     .container-fluid {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem;
+        padding: 3rem 5rem;
     }
 
     .logo {
@@ -44,17 +89,124 @@
             justify-content: center;
             align-items: center;
             gap: 3rem;
-            background: $color-primary;
+            background: $color-secondary;
             transition: right .5s ease;
 
             a {
-                color: $white;
+                color: $black;
                 border-bottom: 2px solid transparent;
 
                 &:hover {
-                    border-bottom: 2px solid $white;
+                    border-bottom: 2px solid $black;
                 }
             }
         }
+    }
+}
+
+#hero {
+
+    margin-top: 12rem;
+
+    @media (min-width:1025px) {
+        margin-top: 0;
+    }
+
+    .hero__text-side {
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+
+    }
+}
+
+#about {
+    blockquote {
+        margin: 3.5rem 0 0;
+        font-style: italic;
+        font-size: 2rem;
+        line-height: 2;
+
+        i {
+            font-size: 3rem;
+            color: $color-accent;
+            margin-right: 1rem;
+        }
+    }
+
+    .about__text-side {
+        margin: 5rem;
+
+        .author {
+            text-align: right;
+        }
+    }
+}
+
+#features {
+    margin-top: 10rem;
+
+    .features__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 12rem;
+        }
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
+
+#courses {
+    margin-top: 15rem;
+}
+
+#offer {
+    margin-top: 15rem;
+}
+
+#contact {
+    margin-top: 15rem;
+
+    form {
+        input {
+            margin: .5rem 0;
+            display: block;
+            padding: 1rem;
+            width: 100%;
+            border: 2px solid $color-primary;
+        }
+
+
+    }
+}
+
+#footer {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    background: $color-accent;
+    color: $white;
+    margin-top: 10rem;
+    padding: 5rem;
+
+    i {
+        color: $white;
+        font-size: 4rem;
+        margin: 0 2rem;
     }
 }
